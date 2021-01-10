@@ -11,6 +11,7 @@ mainForm.addEventListener('submit', async (e)=>{
   const tipo = mainForm.tipo.value;
  try {
    const response = await fetch(`${mainUrl}${urlTemination}`,{method: 'POST',
+   credentials: 'include',
    body: JSON.stringify({userId,
     password,
     tipo,}),
